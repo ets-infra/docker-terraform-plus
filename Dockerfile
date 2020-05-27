@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 MAINTAINER Kenny Van de Maele <kenny@adimian.com>
 
-ARG TERRAFORM_VER="0.12.24"
-ARG AIVEN_VER="1.2.3"
+ARG TERRAFORM_VER="0.12.25"
+ARG AIVEN_VER="1.2.4"
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install curl wget unzip zip python3-pip && \
     wget https://releases.hashicorp.com/terraform/${TERRAFORM_VER}/terraform_${TERRAFORM_VER}_linux_amd64.zip && \
