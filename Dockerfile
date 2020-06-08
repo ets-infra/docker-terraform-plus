@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER Kenny Van de Maele <kenny@adimian.com>
 
-ARG TERRAFORM_VER="0.12.25"
+ARG TERRAFORM_VER="0.12.26"
 ARG AIVEN_VER="1.2.4"
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install curl wget unzip zip python3-pip && \
