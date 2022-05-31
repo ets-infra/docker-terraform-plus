@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM saltstack/ubuntu-13.04-minimal
 
 MAINTAINER Kenny Van de Maele <kenny@adimian.com>
 
