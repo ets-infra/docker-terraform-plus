@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 MAINTAINER Kenny Van de Maele <kenny@adimian.com>
 
@@ -9,8 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install git curl
     unzip terraform_${TERRAFORM_VER}_linux_amd64.zip && \
     sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && \
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && \
-    apt update && \
-    apt -y upgrade && \
+    apt-get update && \
     apt-get -y install postgresql-client-12 && \
     mv terraform /usr/local/bin/
 
