@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: etsinfra/docker-terraform-plus:latest,etsinfra/docker-terraform-plus:2.0.0
+          tags: etsinfra/docker-terraform-plus:3.0.0
