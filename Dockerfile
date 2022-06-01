@@ -7,6 +7,8 @@ ARG TERRAFORM_VER="0.14.7"
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install git curl wget unzip zip python3-pip && \
     wget https://releases.hashicorp.com/terraform/${TERRAFORM_VER}/terraform_${TERRAFORM_VER}_linux_amd64.zip && \
     unzip terraform_${TERRAFORM_VER}_linux_amd64.zip && \
+    sudo apt update && \
+    sudo apt -y upgrade && \
     apt-get -y install postgresql-client-13 && \
     mv terraform /usr/local/bin/
 
